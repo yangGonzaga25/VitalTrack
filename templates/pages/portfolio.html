@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Form</title>
+
+</head>
+<body>
+    {% load static %}
+
+    <div class="post-container">
+        <div class="post-header">
+            <img src="{% static 'images/display_photo.jpg' %}" alt="Profile Picture">
+            <div>
+                <h5>_tanz.zz</h5>
+                <p>Hoobastank • The Reason</p>
+            </div>
+        </div>
+
+        <div class="post-image">
+            <img src="{% static 'images/home_post.gif' %}" alt="Post Image">
+        </div>
+
+        <div class="post-caption">
+            I’m Tanya Grace Gonzaga, here to turn tech dreams into reality, one line of code at a time!        </div>
+
+        <div class="post-interactions">
+            <div>
+                <span>❤️ 227k  </span>
+            </div>
+            <div>
+                <span>💬 433  </span>
+            </div>
+            <div>
+                <span>🔁 67.2k</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

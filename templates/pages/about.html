@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="profile-header">
+        <div class="profile-picture">
+            <img src="{% static 'images/display_photo.jpg' %}" alt="Tanya Grace Profile" />
+        </div>
+        <div class="profile-info">
+            <h1>Tanya Grace Gonzaga</h1>
+            <p>Student Developer | Student Leader | Chess Player </p>
+            <p>💻 CCS | BSIT</p>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-header">
+            <img src="{% static 'images/display_photo.jpg' %}" alt="Profile Picture">
+            <div>
+                <h5>_tanz.zz</h5>
+                <p>Hoobastank • The Reason</p>
+            </div>
+        </div>
+
+
+        <div class="post-caption">
+            <p>
+                Hi! I’m Tanya Grace S. Gonzaga, a third-year Bachelor of Science in Information Technology student with a strong passion for learning and improving, both in and out of the classroom.
+            </p>
+    
+            <p> 
+                Outside of my role as a student developer, I make sure to find balance in life through activities that bring me peace. I have a special love for nature as it’s calming presence helps me unwind after a long days of stress. Whether I’m at home relaxing with my cats or watching a good movie or anime series, I always find comfort in these little moments. I also enjoy outdoor adventures like traveling, hiking, and camping. Exploring new places and being out in nature gives me a sense of freedom. On top of that, I take on commissioned work to help support my family financially, using my skills to contribute to meaningful projects while also giving back to those who matter most to me.
+    
+            </p>
+            <p> 
+                During my academic journey, I’ve taken on leadership roles that have helped me grow. Those roles had improve my organizational skills and given me experience in managing tasks efficiently. I also love chess and was thrilled to win a gold medal for the College of Computer Studies during Sportsfest last academic year. These experiences, whether in project work or leadership roles, have helped me grow as both a team player and leader.
+                </p>
+    
+            <p>
+                As a student developer, I focus on both frontend and backend systems, database management, and web development using languages and frameworks like PHP, MySQL, noSQL, Java, Angular, Laravel, and Svelte. My journey started with simple projects, but now, I’m working toward more a little more complex systems, like an Efficient Appointment Scheduling System for healthcare management. I’m constantly learning and improving, pushing my limits to contribute something meaningful to every project I’m a part of.
+            </p></div>
+
+        <div class="post-interactions">
+            <div>
+                <span>❤️ 227k  </span>
+            </div>
+            <div>
+                <span>💬 433  </span>
+            </div>
+            <div>
+                <span>🔁 67.2k</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

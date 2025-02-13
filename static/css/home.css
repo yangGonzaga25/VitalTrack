@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.post-container {
+    width: 60%;
+    background-color: black;
+    color: white; 
+    border: 2px solid white; 
+    border-radius: 10px;
+    margin-top: 20px;
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 50px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left; 
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: -10px;
+    margin-bottom: -45px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-header img {
+    margin-left: 0.3rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; 
+}
+
+.post-header div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.post-header h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.post-header p {
+    padding-bottom: -45px;
+    margin: 0;
+    font-size: 12px;
+    color: #ccc; 
+}
+
+.post-image {
+    width: 100%;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+}
+
+.post-caption {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:-28px;
+}
+
+.post-interactions {
+    gap: 1.5rem;
+    display: flex;
+    justify-content: flex-start; 
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.post-interactions div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc; 
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/portfoliopage.css' %}">
+</head>
+<body>
+    <section class="gallery-container">
+        <h1>My Portfolio</h1>
+
+        <h2>Latest Projects</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery1.jpg' %}" alt="My Weather App">
+                <div class="caption">My Weather App</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery2.jpg' %}" alt="My Basic E-commerce">
+                <div class="caption">My Basic E-commerce</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery3.jpg' %}" alt="My Blog-Post App">
+                <div class="caption">My Blog-Post App</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery4.jpg' %}" alt="My Image Gallery">
+                <div class="caption">My Image Gallery</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery5.jpg' %}" alt="My Kanban Board">
+                <div class="caption">My Kanban Board</div>
+            </div>
+        </div>
+
+        <h2>Empowered League of Information and Technology Education Student</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery6.jpg' %}" alt="2022 ELITES Business Manager">
+                <div class="caption">2022 ELITES Business Manager</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery7.jpg' %}" alt="Digital Literacy Speaker">
+                <div class="caption">Digital Literacy Speaker</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery8.jpg' %}" alt="2023-2024 ELITES Secretary">
+                <div class="caption">2023-2024 ELITES Secretary</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery9.jpg' %}" alt="ALS Program - Computer Workspace Essential">
+                <div class="caption">ALS Program - Computer Workspace Essential</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery10.jpg' %}" alt="Brigada Eskwela Best Matatag School">
+                <div class="caption">Brigada Eskwela Best Matatag School</div>
+            </div>
+        </div>
+
+        <h2>Webinar Certificates</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery11.jpg' %}" alt="Crafting Program-based Community Extension Activities">
+                <div class="caption">Crafting Program-based Community Extension Activities</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery12.jpg' %}" alt="Web Content Management System using Wordpress">
+                <div class="caption">Web Content Management System using Wordpress</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery13.jpg' %}" alt="AI-Driven Success">
+                <div class="caption">AI-Driven Success</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery14.jpg' %}" alt="Game On">
+                <div class="caption">Game On </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery15.jpg' %}" alt="Tech Trends: Gig Economy">
+                <div class="caption">Tech Trends: Gig Economy</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery16.jpg' %}" alt="Filipino Web Development">
+                <div class="caption">Filipino Web Development</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery17.jpg' %}" alt="Google Developer Student">
+                <div class="caption">Google Developer Student</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery18.jpg' %}" alt="Kabataang Digital: Career Opportunities in ICT">
+                <div class="caption">Kabataang Digital: Career Opportunities in ICT</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery19.jpg' %}" alt="Cybersecurity Awareness">
+                <div class="caption">Cybersecurity Awareness</div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/images/gallery20.jpg' %}" alt="Digital StartUp">
+                <div class="caption">Digital StartUp</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endblock %}
