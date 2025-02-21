@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'css/activity2_dashboard.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="{% static 'images/act2_logo.png' %}" alt="Activity 2 Logo">
+            </div>
+            <a href="{% url 'portfolio:activity2_dashboard' %}">Dashboard</a>
+            <a href="{% url 'portfolio:reports' %}">Reports</a>
+            <a href="{% url 'portfolio:inventory' %}">Inventory</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="topnav">
+                <div class="datetime" id="datetime"></div>
+            </div>
+
+            <div class="dashboard-content">
+                {% block dashboard_content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 
+                              hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+
+</body>
+
+</html>

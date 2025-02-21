@@ -1,0 +1,32 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+{% load custom_filters %}  <!-- Load the custom filter -->
+
+{% block title %}Activity 2 - Dashboard{% endblock %}
+
+{% block dashboard_content %}
+<h2>Dashboard</h2>
+
+    <div class="dashboard-container">
+        {% for item in data %}
+            <div class="card">
+                <!-- Add specific icons based on item title -->
+                {% if item.title == "Users" %}
+                    <i class="fas fa-user"></i>  <!-- User Icon -->
+                {% elif item.title == "Orders" %}
+                    <i class="fas fa-shopping-cart"></i>  <!-- Orders Icon -->
+                {% elif item.title == "Revenue" %}
+                    <i class="fas fa-dollar-sign"></i>  <!-- Revenue Icon -->
+                {% endif %}
+                
+                <h3>{{ item.title }}</h3>
+                
+                {% if item.title == "Revenue" %}
+                    <p>{{ item.count|revenue_format:"PHP" }} or {{ item.count|revenue_format:"USD" }}</p>
+                {% else %}
+                    <p>{{ item.count }}</p>
+                {% endif %}  <!-- ✅ Properly close the 'if' statement -->
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

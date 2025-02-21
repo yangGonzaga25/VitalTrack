@@ -13,7 +13,6 @@
   </head>
   <body>
     
-    
     <nav class="topnav">
         <div class="logo-container">
             <img src="{% static 'images/name_logo.png' %}" alt="Name Logo" class="name-logo" />
@@ -23,10 +22,26 @@
             <a href="{% url 'portfolio:portfoliopage' %}" class="{% if request.resolver_match.url_name == 'portfoliopage' %}active{% endif %}">Portfolio</a>
             <a href="{% url 'portfolio:about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
             <a href="{% url 'portfolio:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+        
+            <!-- Animated Arrow -->
+            <span class="dashboard-arrow">➡</span>
+        
+            <a href="{% url 'portfolio:activity2_dashboard' %}" class="{% if request.resolver_match.url_name == 'activity2_dashboard' %}active{% endif %}">Dashboard</a>
         </div>
+        
     </nav>
-       
-    <div class="container">{% block content %}{% endblock %}</div>
+    {% if request.resolver_match.url_name == 'activity2_dashboard' %}
+    
+    <div class="dashboard-layout">
+        <div class="dashboard-content">
+            {% block dashboard_content %}{% endblock %}
+        </div>
+    </div>
+{% else %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+{% endif %}
 
   </body>
 </html>
