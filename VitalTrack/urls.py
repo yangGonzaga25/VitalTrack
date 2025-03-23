@@ -20,5 +20,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('portfolio.urls', namespace="portfolio")),  
+    path('api/', include ([
+        path('items/', include('items.urls', namespace='items')) 
+    ]))
 ]
+
+#Tanya Grace S. Gonzaga - Activity3
 
